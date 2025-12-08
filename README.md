@@ -65,3 +65,43 @@ https://www.himalayandatabase.com/downloads/Himalayan%20Database.zip
 - How often does bad weather (TERMREASON = 4) play a role in termination compared to technical difficulty (TERMREASON = 10)?
 - Are expeditions with no hired personnel (NOHIRED) associated with higher or lower death rates?
 
+-------------------------------------------------
+-------------------------------------------------
+
+The EDA brief was then developed into a concrete workflow: first clean/tidy with NumPy/pandas, then analyze/visualize with Matplotlib/Seaborn/Plotly/Dash, and finally do some text analysis with spaCy.
+
+## 1. Cleaning and tidying with NumPy/pandas
+
+- Load all CSVs, check shapes/dtypes, and standardize column names (lowercase, no spaces, consistent prefixes like `exp_`, `peak_`).  
+- Handle missing values: inspect `isna().sum()`, decide when to drop rows/columns vs. impute (e.g., median heights, mode for categorical status), and ensure numeric columns are numeric (`to_numeric`, `astype(float)`), using NumPy for replacements (`np.where`, `np.nan`).  
+- Fix categories and codes: map numeric codes like `PSTATUS`, `HIMAL_FACTOR`, `TERMREASON` to readable labels via dictionaries; normalize country/route names, and create tidy tables (separate expeditions, peaks, routes) with one row per entity and meaningful keys.  
+
+## 2. Feature engineering in pandas/NumPy
+
+- Create analytic features: expedition success flag (any success columns true), derived metrics like success rate per peak or route, death rate, altitude bands, and boolean indicators for oxygen use and hired personnel.  
+- Aggregate with `groupby` for the questions in your screenshot: distribution of PSTATUS by HIMAL_FACTOR, mean HEIGHTM by HIMAL_FACTOR, distributions of HEIGHTM for OPEN vs not, success rates by ROUTE1–4, oxygen vs non‑oxygen success, termination reasons (weather vs technical), and hired vs non‑hired death/success rates.  
+- Store reusable aggregates in separate DataFrames (e.g., `status_by_range`, `route_success`, `reason_counts`) and cache intermediate results to CSV/Parquet for version control.  
+
+## 3. EDA with Matplotlib and Seaborn
+
+- Use Seaborn for quick statistics: countplots/histplots of PSTATUS, HEIGHTM distributions, box/violin plots of HEIGHTM by HIMAL_FACTOR, bar plots of success rate by route and oxygen use; use Matplotlib when you need more low‑level control or publication‑quality tweaks.  
+- Build multi‑panel figures to compare ranges or time periods, annotate important peaks or outliers, and always link visuals directly to the project questions (e.g., “Which mountain range has the highest average peak height?”).  
+- Save plots with clear filenames and resolutions, and document insights inline in your notebook (e.g., observations about outliers, unusual termination reasons, or inconsistent codes).  
+
+## 4. Interactive views with Plotly and Dash
+
+- Replicate key Seaborn/Matplotlib plots in Plotly Express for interactivity (hover, zoom): bar charts of average success rate by route, scatter of HEIGHTM vs success with color by HIMAL_FACTOR, histograms split by oxygen/hired flags.  
+- Use Dash to wrap these into an app:  
+  - Controls like dropdowns (select range/peak), radio buttons (metric: success rate vs death rate), and sliders (year range if available).  
+  - Graphs that update based on selections, plus optional data tables showing filtered expeditions.  
+- Deploy the Dash app locally (as you did with gapminder) and treat it as an interactive report for your findings.  
+
+## 5. Text and documentation with spaCy
+
+- Jamie wants to use Accidents as it contains free-text - are there others?
+
+- When we have free‑text fields (route descriptions, incident narratives, notes), use spaCy to clean and analyze them: tokenize, lemmatize, remove stopwords, and extract named entities (places, dates, organizations).  
+- Build simple text features like keyword flags (e.g., “avalanche”, “crevasse”, “storm”), route type descriptors, or difficulty hints, and join them back to the expedition DataFrame for correlation with outcomes.  
+- Use this text analysis to enrich the EDA (e.g., compare success or death rates for expeditions mentioning “weather” terms vs those that don’t) and to provide qualitative examples in your reflection/lessons learned.  
+
+Next step can be a concrete notebook outline with example pandas/Seaborn/Plotly/Dash/spaCy code snippets tailored to the actual Himalayan tables.
