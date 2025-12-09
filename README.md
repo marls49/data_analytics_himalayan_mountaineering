@@ -110,11 +110,15 @@ Next step can be a concrete notebook outline with example pandas/Seaborn/Plotly/
 -----------------------------------------------
 ------------------------------------------------
 
+Lessons learnt
+
 ### Documentations and Version control
 
-The Team (Miles and James) decided that the best way to approach the project was as a professional team would. We started the day with a Stand up at 0830, showing what was done the day before and highlighting the plan for the day ahead. After this was completed code was shared and problem solving started on any bugs. 
+The Team (Miles and James) decided that the best way to approach the project was as a professional team would.
 
-Secondly it was agreed that the Documentation would be included within the Notebooks and within the readme. 
+To do this we had two main focused; structure and documentation. We started the day with a Stand up at 0830, showing what was done the day before and highlighting the plan for the day ahead. After this was completed code was shared and problem solving started on any bugs. 
+
+Secondly we used both "belt and braces" (auf Nummer sicher gehen) and decided to put documentation within both the Notebooks and within the readme. 
 
 Thirdly for version control we decided to set up a Github repo https://github.com/marls49/data_analytics_himalayan_mountaineering, using commits to track progress and resolve issues with merges or clashes with data sets to ensure that consistency was maintained. 
 
