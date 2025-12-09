@@ -105,3 +105,26 @@ The EDA brief was then developed into a concrete workflow: first clean/tidy with
 - Use this text analysis to enrich the EDA (e.g., compare success or death rates for expeditions mentioning “weather” terms vs those that don’t) and to provide qualitative examples in your reflection/lessons learned.  
 
 Next step can be a concrete notebook outline with example pandas/Seaborn/Plotly/Dash/spaCy code snippets tailored to the actual Himalayan tables.
+
+
+-----------------------------------------------
+------------------------------------------------
+
+### Documentations and Version control
+
+The Team (Miles and James) decided that the best way to approach the project was as a professional team would. We started the day with a Stand up at 0830, showing what was done the day before and highlighting the plan for the day ahead. After this was completed code was shared and problem solving started on any bugs. 
+
+Secondly it was agreed that the Documentation would be included within the Notebooks and within the readme. 
+
+Thirdly for version control we decided to set up a Github repo https://github.com/marls49/data_analytics_himalayan_mountaineering, using commits to track progress and resolve issues with merges or clashes with data sets to ensure that consistency was maintained. 
+
+### Reflection & Lessons Learned
+
+The biggest learning we experienced as a team was the importance of a dataset that we were both using the same dataset, secondly working on different parts of the same project and how github, whilst incredibly helpful still needs to removed in terms of mark ups - merges need to be aligned and gone through within the team as part of the process. For example we have been through the merger clashes on Visual Studio Code together step by step to ensure alignment within our tiny team. 
+
+The key point here is that this project has given us a taste of how it would be to work in a team. Teamwork is not solely about hardskills - in this case Numpy or Pandas, Seabourne or Spacy but also about ensuring a cohesive unit that can pull together, a very valueable skillset for the future. 
+
+
+### Presentation/Reporting
+
+The decision we made as a team was that the best method for presenting was on Jupyter or on VSC, refering to the documentation 
