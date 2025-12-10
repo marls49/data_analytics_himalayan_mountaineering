@@ -84,17 +84,17 @@ The EDA brief was then developed into a concrete workflow: first clean/tidy with
 
 ## 3. EDA with Matplotlib and Seaborn
 
-- Use Seaborn for quick statistics: countplots/histplots of PSTATUS, HEIGHTM distributions, box/violin plots of HEIGHTM by HIMAL_FACTOR, bar plots of success rate by route and oxygen use; use Matplotlib when you need more low‑level control or publication‑quality tweaks.  
+- Use Seaborn for quick statistics: countplots/histplots of PSTATUS, HEIGHTM distributions, box/violin plots of HEIGHTM by HIMAL, bar plots of success rate by route and oxygen use; use Matplotlib when you need more low‑level control or publication‑quality tweaks.  
 - Build multi‑panel figures to compare ranges or time periods, annotate important peaks or outliers, and always link visuals directly to the project questions (e.g., “Which mountain range has the highest average peak height?”).  
-- Save plots with clear filenames and resolutions, and document insights inline in your notebook (e.g., observations about outliers, unusual termination reasons, or inconsistent codes).  
+- Save plots with clear filenames and resolutions, and document insights inline in notebook (e.g., observations about outliers, unusual termination reasons, or inconsistent codes).  
 
 ## 4. Interactive views with Plotly and Dash
 
-- Replicate key Seaborn/Matplotlib plots in Plotly Express for interactivity (hover, zoom): bar charts of average success rate by route, scatter of HEIGHTM vs success with color by HIMAL_FACTOR, histograms split by oxygen/hired flags.  
+- Replicate key Seaborn/Matplotlib plots in Plotly Express for interactivity (hover, zoom): bar charts of average success rate by route, scatter of HEIGHTM vs success with colour by HIMAL, histograms split by oxygen/hired flags.  
 - Use Dash to wrap these into an app:  
   - Controls like dropdowns (select range/peak), radio buttons (metric: success rate vs death rate), and sliders (year range if available).  
   - Graphs that update based on selections, plus optional data tables showing filtered expeditions.  
-- Deploy the Dash app locally (as you did with gapminder) and treat it as an interactive report for your findings.  
+- Deploy the Dash app locally and treat it as an interactive report for the findings.  
 
 ## 5. Text and documentation with spaCy
 
@@ -124,7 +124,7 @@ Thirdly for version control we decided to set up a Github repo https://github.co
 
 ### Reflection & Lessons Learned
 
-The biggest learning we experienced as a team was the importance of a dataset that we were both using the same dataset, secondly working on different parts of the same project and how github, whilst incredibly helpful still needs to removed in terms of mark ups - merges need to be aligned and gone through within the team as part of the process. For example we have been through the merger clashes on Visual Studio Code together step by step to ensure alignment within our tiny team. 
+The biggest learning we experienced as a team was the importance of a teamwork (e.g that we were both using the same dataset) secondly working on different parts of the same project and how github, whilst incredibly helpful still needs to removed in terms of mark ups - merges need to be aligned and gone through within the team as part of the process. For example we have been through the merger clashes on Visual Studio Code together step by step to ensure alignment within our tiny team. 
 
 The key point here is that this project has given us a taste of how it would be to work in a team. Teamwork is not solely about hardskills - in this case Numpy or Pandas, Seabourne or Spacy but also about ensuring a cohesive unit that can pull together, a very valueable skillset for the future. 
 
