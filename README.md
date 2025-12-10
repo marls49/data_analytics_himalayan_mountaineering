@@ -98,14 +98,16 @@ The EDA brief was then developed into a concrete workflow: first clean/tidy with
 
 ## 5. Text and documentation with spaCy
 
-- Jamie wants to use Accidents as it contains free-text - are there others?
+- Used Accidents and  as it contains free-text
 
 - When we have free‑text fields (route descriptions, incident narratives, notes), use spaCy to clean and analyze them: tokenize, lemmatize, remove stopwords, and extract named entities (places, dates, organizations).  
+ 
+
+***Suggested next steps:*** 
+
+- could be a notebook outline with example pandas/Seaborn/Plotly/Dash/spaCy code snippets tailored to the actual Himalayan tables.
 - Build simple text features like keyword flags (e.g., “avalanche”, “crevasse”, “storm”), route type descriptors, or difficulty hints, and join them back to the expedition DataFrame for correlation with outcomes.  
-- Use this text analysis to enrich the EDA (e.g., compare success or death rates for expeditions mentioning “weather” terms vs those that don’t) and to provide qualitative examples in your reflection/lessons learned.  
-
-Next step can be a concrete notebook outline with example pandas/Seaborn/Plotly/Dash/spaCy code snippets tailored to the actual Himalayan tables.
-
+- Use this text analysis to enrich the EDA (e.g., compare success or death rates for expeditions mentioning “weather” terms vs those that don’t) and to provide qualitative examples in your reflection/lessons learned. 
 
 -----------------------------------------------
 ------------------------------------------------
